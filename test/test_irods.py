@@ -60,7 +60,7 @@ def main(args):
     #utilities.log.info('TEST a flat directory PUT')
     ##Local dir. A previously downloaded namforecast
     ##localdir='/projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
-    localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
+    #localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
     #irodsdir=irodsdir='/'.join([topdir,'test1','namforecast'])    
     #irods.putFlatDir(localdir, irodsdir)
 

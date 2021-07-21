@@ -123,7 +123,7 @@ class irods_utilities:
         """
         Establish a new subcollection into which a file will be stored
         We expect that the stored file is an aggregate (such as a tar)
-        The chosen poath should already have been specified and basedf off the topdir
+        The chosen path should already have been specified and basedf off the topdir
     
         It is okay to have a recursive request (ie multiple depth path)
         """
@@ -134,8 +134,8 @@ class irods_utilities:
             except Exception as ex:
                 template = "An exception of type {0} occurred. Arguments:\n{1!r}"
                 message = template.format(type(ex).__name__, ex.args)
-                utilities.log.warn('IRODS subcollection: {}'.format(message))
-        #        # sys.exit(1)
+                print('Failed: IRODS subcollection: {}'.format(message))
+                sys.exit(1)
         print(coll.path)
         return coll.path
 
@@ -161,6 +161,7 @@ class irods_utilities:
         """
         #logical_path='/'.join([collection,filename])
         print('start put')
+        print('{}, {}, {}, {}'.format(inlocaldir, localfilename, inirodsdir, irodsfilename))
         irodsdir=self.createSubCollection(newcollection=inirodsdir)
         localfile="{0}/{1}".format(inlocaldir,localfilename)
         irodsfile="{0}/{1}".format(irodsdir,irodsfilename)
@@ -200,6 +201,7 @@ class irods_utilities:
 #      /EDZone/irods/rootdir/data/a
 #      /EDZone/irods/rootdir/data/b
 #      /EDZone/irods/rootdir/data/c
+
     def putDir(self, inlocaldir, inirodsdir):
         """
         This version is being constructed to handle arbitrary depths
@@ -211,8 +213,8 @@ class irods_utilities:
             for filename in filenames:
                 # Build and create the irods final file name
                 localdir=os.path.join(os.path.abspath(dirpath))
-                irodsdir="{0}/{1}".format(inirodsdir,os.path.join(os.path.relpath(dirpath,'')))
-                #print('final {}, {}, {}, {}'.format(localdir, filename, irodsdir, filename))
+                irodsdir="{0}/{1}".format(inirodsdir,os.path.join(os.path.relpath(dirpath,'..')))
+                print('final LIB {}, {}, {}, {}'.format(localdir, filename, irodsdir, filename))
                 self.putFile(localdir, filename, irodsdir, filename)
         utilities.log.info('Finished copying dir {} to {} '.format(inlocaldir,inirodsdir))
 
