@@ -40,29 +40,29 @@ def main(args):
     topdir = irods.findTopdir()
 
     ## PUT a file into a new subcollection
-    #utilities.log.info('TEST a put')
-    #newdir='/'.join([topdir,'test1','test2'])
-    ## Push a single file to the new subcollection
-    #localfilename='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA/TEST1234_archive.tar.gz'
-    ##localfilename='maxwvel.63.10.10.mbtiles'
-    #localdir='./irods/DATA'
-    #irods.putFile(localdir, localfilename, newdir, localfilename)
+    utilities.log.info('TEST a put')
+    newdir='/'.join([topdir,'test1','test2'])
+    # Push a single file to the new subcollection
+    localfilename='TEST1234_archive.tar.gz'
+    #localfilename='maxwvel.63.10.10.mbtiles'
+    localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA'
+    irods.putFile(localdir, localfilename, newdir, localfilename)
 
     ## GET back a single file into a (potentially) diff filename
-    #utilities.log.info('TEST a get')
-    #irodsdir='/'.join([topdir,'test1','test2'])
-    #irodsfilename='TEST1234_archive.tar.gz'
-    #localdir='.'
-    #localfilename='reread.tar.gz'
-    #irods.getFile(irodsdir, irodsfilename, localdir, localfilename)
+    utilities.log.info('TEST a get')
+    irodsdir='/'.join([topdir,'test1','test2'])
+    irodsfilename='TEST1234_archive.tar.gz'
+    localdir='.'
+    localfilename='reread.tar.gz'
+    irods.getFile(irodsdir, irodsfilename, localdir, localfilename)
 
     ## Can we put an entire directory. No According to Terrell we will need to walk the directory
-    #utilities.log.info('TEST a flat directory PUT')
-    ##Local dir. A previously downloaded namforecast
-    ##localdir='/projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
-    #localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
-    #irodsdir=irodsdir='/'.join([topdir,'test1','namforecast'])    
-    #irods.putFlatDir(localdir, irodsdir)
+    utilities.log.info('TEST a flat directory PUT')
+    #Local dir. A previously downloaded namforecast
+    #localdir='/projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
+    localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast'
+    irodsdir=irodsdir='/'.join([topdir,'test1','flatnamforecast'])    
+    irods.putFlatDir(localdir, irodsdir)
 
     ## Can we put an entire directory. No According to Terrell we will need to walk the directory
     print('TEST a hierarchical directory PUT')
