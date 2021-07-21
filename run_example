@@ -1,0 +1,8 @@
+# stage_data
+# No longer exists python stage_data.py --inputURL http://tds.renci.org:8080/thredds/fileServer/2021/nam/2021010500/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/namforecast  --outputDir=./input
+#
+python stage_data.py --inputURL http://tds.renci.org:8080/thredds/fileServer/2021/nam/2021061000/ec95d/hatteras.renci.org/ec95d-nam-bob-rptest/namforecast --outputDir=./input
+
+# finalize_data
+python finalize_data.py --inputDir ./input --outputDir ./outdir --tarMeta 'TEST1234' 
+

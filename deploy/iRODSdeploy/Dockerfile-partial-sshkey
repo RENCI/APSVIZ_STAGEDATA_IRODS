@@ -1,0 +1,114 @@
+##############
+# Docker file for the creation of the adcirc support tools.
+#
+# to create image: docker build -t adcirc_supp:latest .
+# to push image:
+#       docker tag adcirc_supp:latest renciorg/adcirc_supp:latest
+#       docker push renciorg/adcirc_supp:latest
+##############
+FROM continuumio/miniconda3
+
+# get some credit
+LABEL maintainer="jtilson@renci.org"
+
+# Switch to jtilson for testing. Should be the EDS service account
+RUN useradd -ms /bin/bash -u 1015 jtilson 
+
+#RUN groupadd -r jtilson &&\
+#    useradd -r -g jtilson -d /home/jtilson -s /sbin/nologin -u 1015 -c "Docker image user" jtilson
+
+# make sure the container is up-to-date
+RUN apt-get update
+
+# Start off getting Python 3.7.3
+RUN conda install  -y python=3.7.3
+
+# update conda and set the download channel
+RUN conda update conda && \
+    conda config --add channels conda-forge
+
+# tell conda what the shell is
+RUN conda init bash
+
+# make d directory for the repos and go there
+RUN mkdir /repo
+WORKDIR /repo
+
+# get the repos
+RUN git clone https://github.com/RENCI/ADCIRCSupportTools.git
+RUN git clone https://github.com/GClunies/noaa_coops.git
+               
+# move to the install directory
+WORKDIR ADCIRCSupportTools/INSTALL
+
+# install the conda requirements
+RUN conda install --yes --file conda_requirements.txt
+                                
+# install the pip requirements
+RUN pip install -r pip_requirements.txt
+                              
+# change to the noaa directory
+WORKDIR /repo/noaa_coops
+
+# run the noaa seteup
+RUN python setup.py install --user
+                        
+# change to the pipelines directory                        
+#WORKDIR /repo/ADCIRCSupportTools/pipelines
+                                   
+# make a temporary directory for the output.
+# this should eventually point a common PV
+
+RUN mkdir temp
+
+# set the python path
+ENV PYTHONPATH=/repo/ADCIRCSupportTools
+
+# set the location of the output directory
+ENV RUNTIMEDIR=/data
+
+#ENV HOME=/home/jtilson
+#ENV APP_HOME ./jtilson/my-project
+#ENV APP_HOME /repo
+
+## SETTING UP THE APP ##
+#RUN mkdir $APP_HOME
+#WORKDIR $APP_HOME
+
+RUN chown -R jtilson /repo
+
+# change to the pipelines directory                        
+WORKDIR /repo/ADCIRCSupportTools/pipelines
+
+# Last thing.... connect as the user
+USER jtilson
+
+# Setup the ssh ketsa freom the environment variables
+
+RUN mkdir /home/jtilson/.ssh
+RUN echo "$SSHPRIV" > /home/jtilson/.ssh/id_rsa
+RUN chmod 600 /home/jtilson/.ssh/id_rsa
+RUN echo "$SSHPUB" > /home/jtilson/.ssh/id_rsa.pub
+RUN chmod 600 /home/jtilson/.ssh/id_rsa.pub
+
+ARG SSH_KEY
+ENV SSH_KEY=$SSH_KEY
+
+# Create id_rsa from string arg, and set permissions
+
+RUN echo "$SSH_KEY" > /home/jtilson/.ssh/id_rsa
+RUN chmod 600 /home/jtilson/.ssh/id_rsa
+ 
+# Create known_hosts else first connect will ask questions
+RUN touch /home/jtilson/.ssh/known_hosts
+
+# Add git providers to known_hosts
+RUN echo "ht3.renci.org" >> /home/jtilson/.ssh/known_hosts
+
+# change to the pipelines directory                        
+WORKDIR /repo/ADCIRCSupportTools/pipelines
+
+##########
+# at this point the container is ready to accept the launch command.
+# see apsviz_job.yaml for the job that launches this container.
+##########

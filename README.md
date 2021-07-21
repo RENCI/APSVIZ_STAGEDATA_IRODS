@@ -1,2 +1,2 @@
-# APSVIZ_STAGEDATA_IRODS
-Variant of the APSVIZ_STAGEDATA mover to use the iRODS resource for storage
+# APSVIZ_STAGEDATA
+APSVIZ Project. Part of code to move req data to/fro (eventually) Kubernetes instances

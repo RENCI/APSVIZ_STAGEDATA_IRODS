@@ -1,0 +1,101 @@
+Opened yaml file /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/utilities/../config/main.yml
+Opened yaml file ./config/irods_environment.json
+[(10002, 'public'),
+ (10025, 'jtilson'),
+ (10022, 'terrell'),
+ (10003, 'rods'),
+ (10001, 'rodsadmin'),
+ (10028, 'bblanton'),
+ (10072, 'ieds')]
+[(<iRODSUserGroup 10002 public>, <iRODSUser 10028 bblanton rodsuser EDSZone>),
+ (<iRODSUserGroup 10002 public>, <iRODSUser 10072 ieds rodsuser EDSZone>),
+ (<iRODSUserGroup 10001 rodsadmin>, <iRODSUser 10003 rods rodsadmin EDSZone>),
+ (<iRODSUserGroup 10002 public>, <iRODSUser 10022 terrell rodsuser EDSZone>),
+ (<iRODSUserGroup 10002 public>, <iRODSUser 10003 rods rodsadmin EDSZone>),
+ (<iRODSUserGroup 10002 public>, <iRODSUser 10025 jtilson rodsuser EDSZone>)]
+Top Collection is 10026 /EDSZone/home/jtilson
+TEST a hierarchical directory PUT
+/projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods
+/EDSZone/home/jtilson/test1/HIERTEST
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods, test_irods.py, /EDSZone/home/jtilson/test1/HIERTEST/irods, test_irods.py
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/APSVIZ_DATA_EXAMPLE, README, /EDSZone/home/jtilson/test1/HIERTEST/irods/APSVIZ_DATA_EXAMPLE, README
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/APSVIZ_DATA_EXAMPLE, fort.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/APSVIZ_DATA_EXAMPLE, fort.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/APSVIZ_DATA_EXAMPLE/tds.renci.org:8080/thredds/fileServer/2021/nam/2021050100/ec95d/hatteras.renci.org/ec95d-nam-bob-rptest/namforecast, fort.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/APSVIZ_DATA_EXAMPLE/tds.renci.org:8080/thredds/fileServer/2021/nam/2021050100/ec95d/hatteras.renci.org/ec95d-nam-bob-rptest/namforecast, fort.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA, TEST1234_archive.tar.gz, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA, TEST1234_archive.tar.gz
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA, README, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA, README
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, wind10m.fort.74.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, wind10m.fort.74.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_DIR.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_DIR.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, minpr.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, minpr.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, everdried.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, everdried.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, wind10m.maxwvel.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, wind10m.maxwvel.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, endrisinginun.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, endrisinginun.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, ec95d-nam-bob-rptest.asgs-2021-Mar-10-T18:26:37-0500.14387.log, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, ec95d-nam-bob-rptest.asgs-2021-Mar-10-T18:26:37-0500.14387.log
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_HS.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_HS.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.68.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.68.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, scenario.log, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, scenario.log
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.64.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.64.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, ncfs-dev-ec95d_nam.sh, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, ncfs-dev-ec95d_nam.sh
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, inundationtime.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, inundationtime.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_TMM10.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_TMM10.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.61.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.61.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.73.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.73.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_HS_max.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_HS_max.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.15, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.15
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.71.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.71.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.22, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.22
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_TPS_max.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_TPS_max.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.72.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.72.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, maxinundepth.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, maxinundepth.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, cycle.log, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, cycle.log
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, maxvel.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, maxvel.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_TPS.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_TPS.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, rads.64.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, rads.64.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, run.properties, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, run.properties
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_DIR_max.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_DIR_max.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.74.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.74.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, initiallydry.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, initiallydry.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, maxele.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, maxele.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, fort.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, fort.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, swan_TMM10_max.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, swan_TMM10_max.63.nc
+xxxxxxxx
+final /projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods/DATA/namforecast, maxwvel.63.nc, /EDSZone/home/jtilson/test1/HIERTEST/irods/DATA/namforecast, maxwvel.63.nc

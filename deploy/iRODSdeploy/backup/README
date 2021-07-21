@@ -1,0 +1,40 @@
+ Bulding docker in the image
+
+Currently the blank images comes out as:
+
+(base) root@4e61943735fb:/usr/bin# uname -a
+Linux 4e61943735fb 3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019 x86_64 GNU/Linux
+(base) root@4e61943735fb:/usr/bin# cat /etc/*release
+PRETTY_NAME="Debian GNU/Linux 10 (buster)"
+NAME="Debian GNU/Linux"
+VERSION_ID="10"
+VERSION="10 (buster)"
+VERSION_CODENAME=buster
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+
+# Are we at 64bit?
+uname -r
+3.10.0-957.21.3.el7.x86_64
+
+
+# Try builing docker ansd friends based on : https://docs.docker.com/engine/install/debian/
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+
+apt-get update
+apt-get install docker-ce docker-ce-cli containerd.io
+
+
+# Switch process: go to: https://hub.docker.com/_/docker/
+
+# Need to provide access to docker-compose.yml
+
+
+############
+# Start over
+# https://github.com/alanking/irods_docker/tree/add-icommands/icommands
+
+

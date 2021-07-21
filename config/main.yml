@@ -1,0 +1,6 @@
+--- # config file
+DEFAULT: &default
+  RDIR: $RUNTIMEDIR   
+  LOGGING: true
+  LOGLEVEL: DEBUG
+  GRAPHICS: true

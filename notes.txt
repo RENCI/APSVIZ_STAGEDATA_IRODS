@@ -1,0 +1,16 @@
+#    irods.putDir(localdir, irodsdir)
+
+
+
+import os
+inlocaldir='/projects/sequence_analysis/vol1/prediction_work/APSVIZ_STAGEDATA_IRODS/irods'
+
+irodsRootdir=
+for dirpath, dirnames, filenames in os.walk(inlocaldir):
+    for file in filenames:
+        print('xxxxxxxx')
+        print(os.path.relpath(dirpath,'')) # Prepend the irods destination
+        print(os.path.join(os.path.relpath(dirpath,''),file)) # Gives path starting at last dir of inlocaldir
+        #print(os.path.join(os.path.abspath(file))) # Yes giver fill local path can be passed to putFile
+
+
