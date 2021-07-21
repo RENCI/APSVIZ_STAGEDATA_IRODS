@@ -40,19 +40,21 @@ def main(args):
 
     ## PUT a file into a new subcollection
     print('TEST a put')
-    newdir='/'.join([topdir,'test1','test2'])
+    newdir='/'.join([topdir,'test1','docker'])
     # Push a single file to the new subcollection
-    localfilename='TEST1234_archive.tar.gz'
-    #localfilename='maxwvel.63.10.10.mbtiles'
-    localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA'
+    #localfilename='TEST1234_archive.tar.gz'
+    localfilename='README'
+    #localdir='/projects/sequence_analysis/vol1/prediction_work/DATA_APSVIZ_STAGEDATA_IRODS/irods/DATA'
+    localdir='./test/DATA'
     irods.putFile(localdir, localfilename, newdir, localfilename)
 
     ## GET back a single file into a (potentially) diff filename
     print('TEST a get')
-    irodsdir='/'.join([topdir,'test1','test2'])
-    irodsfilename='TEST1234_archive.tar.gz'
+    irodsdir='/'.join([topdir,'test1','docker'])
+    #irodsfilename='TEST1234_archive.tar.gz'
+    irodsfilename='README'
     localdir='.'
-    localfilename='reread.tar.gz'
+    localfilename='README_copy'
     irods.getFile(irodsdir, irodsfilename, localdir, localfilename)
 
     ## Can we put an entire directory. No According to Terrell we will need to walk the directory
