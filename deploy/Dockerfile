@@ -31,6 +31,12 @@ WORKDIR /repo/APSVIZ_STAGEDATA_IRODS
 # install the pip requirements
 RUN pip install -r requirements.txt
 
+# set the python path
+ENV PYTHONPATH=/repo/APSVIZ_STAGEDATA_IRODS
+
+# set the location of the output directory
+ENV RUNTIMEDIR=/data
+
 ##########
 # at this point the container is ready to accept the launch command.
 # see stagedata_job.yaml for the job that launches this container.
