@@ -17,7 +17,6 @@ import yaml
 import logging
 import json
 import ssl
-from utilities.utilities import utilities
 from argparse import ArgumentParser
 from irods.session import iRODSSession
 from irods.meta import iRODSMeta
@@ -28,8 +27,6 @@ from pprint import pprint
 from irods.models import User, UserGroup
 from irods.user import iRODSUser, iRODSUserGroup
 import irods.keywords as kw
-# import utilities.irods_utilities as irods
-# from utilities.irods_utilities import irods_utilities
 
 # Part of rodsuser /EDSZone/home/jtilson
 #{
@@ -43,6 +40,14 @@ import irods.keywords as kw
 # Use this one as it 
 
 #session.connection_timeout = 300
+
+def load_yaml(yaml_file):
+    if not os.path.exists(yaml_file):
+        raise IOError("Failed to load yaml config file {}".format(yaml_file))
+    with open(yaml_file, 'r') as stream:
+        config = yaml.safe_load(stream)
+        print('Opened yaml file {}'.format(yaml_file,))
+    return config
 
 class irods_utilities:
 
@@ -58,19 +63,19 @@ class irods_utilities:
         """
         if config is not None:
             self.config = config
-            utilities.log.info('Processed passed dict data {}'.format(self.config))
+            print('Processed passed dict data {}'.format(self.config))
         else:
             try:
                 env_file = os.environ['IRODS_ENVIRONMENT_FILE']
-                utilities.log.info('Found ENV for irods config at {}'.format(env_file))
+                print('Found ENV for irods config at {}'.format(env_file))
             except Exception as ex:
                 #env_file = os.path.expanduser('~/.irods/irods_environment.json')
                 #env_file = os.path.expanduser('./config/irods_environment.json')
                 env_file = os.path.expanduser(yamlname)
-                utilities.log.info('Found passed file for irods config at {}'.format(env_file))
-            self.config = utilities.load_config(env_file)
+                print('Found passed file for irods config at {}'.format(env_file))
+            self.config = load_yaml(env_file) # utilities.load_config(env_file)
         self.passwd = passwd
-        utilities.log.info('Found passwd and stored it')
+        print('Found passwd and stored it')
 
     def  _open_connection(self):
         """
@@ -83,12 +88,12 @@ class irods_utilities:
         try:
             session =iRODSSession(host=self.config['irods_host'], port=self.config['irods_port'],
                 user=self.config['irods_user_name'], password=self.passwd, zone=self.config['irods_zone_name'],**ssl_settings)
-            utilities.log.info('Opened an irods connection')
+            print('Opened an irods connection')
         except Exception as ex:
-            utilities.log.info('Could not start a connection to irods config at {}'.format(config))
+            print('Could not start a connection to irods config at {}'.format(config))
             template = "An exception of type {0} occurred. Arguments:\n{1!r}"
             message = template.format(type(ex).__name__, ex.args)
-            utilities.log.info('IRODS open: {}'.format(message))
+            print('IRODS open: {}'.format(message))
             sys.exit(1)
         return session
 
@@ -130,7 +135,7 @@ class irods_utilities:
         with self._open_connection() as session:
             try: 
                 coll = session.collections.create(newcollection)
-                utilities.log.info('Created a subcollection with id {} and path {}'.format(coll.id, coll.path))
+                print('Created a subcollection with id {} and path {}'.format(coll.id, coll.path))
             except Exception as ex:
                 template = "An exception of type {0} occurred. Arguments:\n{1!r}"
                 message = template.format(type(ex).__name__, ex.args)
@@ -150,7 +155,7 @@ class irods_utilities:
         options = {kw.FORCE_FLAG_KW: ''}
         with self._open_connection() as session:
             session.data_objects.get( irodsfile, localfile, **options )
-        utilities.log.info('Grabbed irods file {}'.format(irodsfilename))
+        print('Grabbed irods file {}'.format(irodsfilename))
 
 #TODO add a FORCE assertion
     def putFile(self, inlocaldir, localfilename, inirodsdir, irodsfilename):
@@ -168,7 +173,7 @@ class irods_utilities:
         print('local {} irods {}'.format(localfile, irodsfile))
         with self._open_connection() as session:
             session.data_objects.put(localfile, irodsfile )
-        utilities.log.info('Put irods file {}'.format(localfilename))
+        print('Put irods file {}'.format(localfilename))
         
 
 #TODO de-clumsify
@@ -185,7 +190,7 @@ class irods_utilities:
         print('irods dir {}'.format(irodsdir))
         for root, directories, filenames in os.walk(inlocaldir):
             if len(directories) is not 0:
-                utilities.log.warn('Local directory structure is not flat. That is a req')
+                print('Local directory structure is not flat. That is a req')
                 sys.exit(1)
             print(len(directories))
             for filename in filenames:
@@ -193,7 +198,7 @@ class irods_utilities:
                 print( filename)
                 #Then move to irods using this
                 self.putFile(inlocaldir, filename, irodsdir, filename) 
-        utilities.log.info('Finished copying dir {} to {} '.format(inlocaldir,inirodsdir))
+        print('Finished copying dir {} to {} '.format(inlocaldir,inirodsdir))
 
 # TODO revisit the construction of the iRODS target directory. Eg currently if 
 #      inlocaldir is /home/user/data with subdirs of a,b, and c then if the irods
@@ -216,7 +221,7 @@ class irods_utilities:
                 irodsdir="{0}/{1}".format(inirodsdir,os.path.join(os.path.relpath(dirpath,'..')))
                 print('final LIB {}, {}, {}, {}'.format(localdir, filename, irodsdir, filename))
                 self.putFile(localdir, filename, irodsdir, filename)
-        utilities.log.info('Finished copying dir {} to {} '.format(inlocaldir,inirodsdir))
+        print('Finished copying dir {} to {} '.format(inlocaldir,inirodsdir))
 
 
 
