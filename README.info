@@ -1,0 +1,8 @@
+This repo now only contains the codes needed to demnstrate moving and fetching a directory of data 
+to/fro iRODS. Ths intent is for tyhis to be simple to incorporate into the current APSVIZ2 stack.
+Thus, some of the architecture ( eg a main.yml, etc) is retained. 
+
+The iRODS password must be eithert supplied at the commpand line or in the ENV IRODSPASSWORD
+The iRODS configuration.json file FQFN must be provided in the ENV IRODS_ENVIRONMENT_FILE, else
+it will look in './config/irods_environment.json'
+
