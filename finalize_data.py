@@ -43,8 +43,6 @@ def main(args):
     logger = LoggingUtil.init_logging("APSVIZ.finalize_data", level=log_level, line_format='medium',
                                       log_file_path=log_path)
 
-    print('init iRODS')
-    session = utilities.initIRODS('***')
     # process args
     if not args.inputDir:
         print(f"Need inputDir on command line: --inputDir $stageDir")
