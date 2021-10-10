@@ -1,8 +1,13 @@
-# stage_data
-# No longer exists python stage_data.py --inputURL http://tds.renci.org:8080/thredds/fileServer/2021/nam/2021010500/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/namforecast  --outputDir=./input
-#
-python stage_data.py --inputURL http://tds.renci.org:8080/thredds/fileServer/2021/nam/2021061000/ec95d/hatteras.renci.org/ec95d-nam-bob-rptest/namforecast --outputDir=./input
+# Run the simple ./test/test_irods.py app
 
-# finalize_data
-python finalize_data.py --inputDir ./input --outputDir ./outdir --tarMeta 'TEST1234' 
+1) If you want to use the default configuration file (./config/irods_environment.json) and pass the passwd on the cmd line.
+
+python ./test/test_irodes.py --passwd 'password'
+
+2) If you want to pass a specific env file AND pass the password as an ENV
+
+export IRODS_ENVIRONMENT_FILE='./config/irods_environment.json'
+export IRODSPASSWORD='password'
+
+python ./test/test_irods.py
 
