@@ -1,0 +1,389 @@
+2021-09-01 10:50:18,578 : INFO : main : execute_APSVIZ_pipeline : adda_services : Grid specified was hsofs 
+2021-09-01 10:50:18,578 : INFO : main : execute_APSVIZ_pipeline : adda_services : Explicit URL provided {'placeHolder': 'http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052318/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/namforecast/fort.63.nc'} 
+2021-09-01 10:50:18,578 : DEBUG : checkAdvisory : execute_APSVIZ_pipeline : adda_services : Check advisory 2021052318 
+2021-09-01 10:50:18,580 : ERROR : checkAdvisory : execute_APSVIZ_pipeline : adda_services : A timestamp data was found Not aHurricane URL ? 2021-05-23 18:00:00 
+2021-09-01 10:50:18,580 : INFO : checkAdvisory : execute_APSVIZ_pipeline : adda_services : URL state_hurricane is False 
+2021-09-01 10:50:18,580 : DEBUG : main : execute_APSVIZ_pipeline : adda_services : hurricane state check is {'placeHolder': 'http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052318/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/namforecast/fort.63.nc'} 
+2021-09-01 10:50:18,591 : INFO : main : execute_APSVIZ_pipeline : adda_services : Specified rootdir underwhich all files will be stored. Rootdir is ./TEST3/ 
+2021-09-01 10:50:18,591 : INFO : main : execute_APSVIZ_pipeline : adda_services : Fetch station data for grid hsofs 
+2021-09-01 10:50:18,598 : INFO : main : execute_APSVIZ_pipeline : adda_services : Retrived stations and nodeids from ../config/CERA_NOAA_HSOFS_stations_V2.csv 
+2021-09-01 10:50:18,599 : INFO : main : execute_APSVIZ_pipeline : adda_services : Fetch ADCIRC-FORECAST 
+2021-09-01 10:50:18,624 : INFO : exec_adcirc_forecast : execute_APSVIZ_pipeline : adda_services : List of available urls input specification: 
+2021-09-01 10:50:18,628 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc placeHolder :  
+2021-09-01 10:50:18,629 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:50:18,629 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052318/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/namforecast/fort.63.nc 
+2021-09-01 10:52:21,516 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-23 19:00:00 -> 2021-05-27 06:00:00 
+2021-09-01 10:52:21,519 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-23 19:00:00 -> 2021-05-27 06:00:00 
+2021-09-01 10:52:21,519 : INFO : get_water_levels63 : GetADCIRC : adda_services : Updating internal time range to reflect data values 
+2021-09-01 10:52:21,520 : INFO : get_water_levels63 : GetADCIRC : adda_services : water_levels_63: ADC actual time range 2021-05-23 19:00:00 2021-05-27 06:00:00 
+2021-09-01 10:52:21,541 : INFO : writeToJSON : GetADCIRC : adda_services : User requests write data also as a JSON format 
+2021-09-01 10:52:21,541 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Begin processing DICT data format 
+2021-09-01 10:52:21,565 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Constructed DICT time series data 
+2021-09-01 10:52:21,584 : INFO : writeDictToJson : utilities : adda_services : Wrote JSON file ./TEST3/adc_wl_forecast.json 
+2021-09-01 10:52:21,584 : INFO : writeToJSON : GetADCIRC : adda_services : Wrote ADC Json as ./TEST3/adc_wl_forecast.json 
+2021-09-01 10:52:21,587 : INFO : main : execute_APSVIZ_pipeline : adda_services : Completed ADCIRC Forecast Read 
+2021-09-01 10:52:21,587 : INFO : main : execute_APSVIZ_pipeline : adda_services : Forecast timein=2021-05-23 19:00:00, timeout=2021-05-27 06:00:00 
+2021-09-01 10:52:21,587 : INFO : main : execute_APSVIZ_pipeline : adda_services : Fetch ADCIRC 
+2021-09-01 10:52:22,121 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052118/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:22,610 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052200/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:23,106 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052206/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:23,648 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052212/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:24,203 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052218/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:24,733 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052300/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:25,302 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052306/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:25,794 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052312/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:26,335 : INFO : get_urls_noyaml : GetADCIRC : adda_services : Grabbed url http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052318/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:26,335 : INFO : exec_adcirc_nowcast : execute_APSVIZ_pipeline : adda_services : New: List of available urls input specification: 
+2021-09-01 10:52:26,344 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052118 :  
+2021-09-01 10:52:26,344 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:52:26,344 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052118/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:35,513 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-21 13:00:00 -> 2021-05-21 18:00:00 
+2021-09-01 10:52:35,515 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-21 18:00:00 
+2021-09-01 10:52:35,515 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052200 :  
+2021-09-01 10:52:35,515 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:52:35,515 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052200/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:44,333 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-21 19:00:00 -> 2021-05-22 00:00:00 
+2021-09-01 10:52:44,335 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-22 00:00:00 
+2021-09-01 10:52:44,336 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052206 :  
+2021-09-01 10:52:44,336 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:52:44,336 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052206/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:52:53,193 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-22 01:00:00 -> 2021-05-22 06:00:00 
+2021-09-01 10:52:53,196 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-22 06:00:00 
+2021-09-01 10:52:53,196 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052212 :  
+2021-09-01 10:52:53,196 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:52:53,196 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052212/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:02,373 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-22 07:00:00 -> 2021-05-22 12:00:00 
+2021-09-01 10:53:02,375 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-22 12:00:00 
+2021-09-01 10:53:02,376 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052218 :  
+2021-09-01 10:53:02,376 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:53:02,376 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052218/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:11,410 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-22 13:00:00 -> 2021-05-22 18:00:00 
+2021-09-01 10:53:11,414 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-22 18:00:00 
+2021-09-01 10:53:11,414 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052300 :  
+2021-09-01 10:53:11,414 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:53:11,414 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052300/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:20,326 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-22 19:00:00 -> 2021-05-23 00:00:00 
+2021-09-01 10:53:20,328 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-23 00:00:00 
+2021-09-01 10:53:20,328 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052306 :  
+2021-09-01 10:53:20,329 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:53:20,329 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052306/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:29,344 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-23 01:00:00 -> 2021-05-23 06:00:00 
+2021-09-01 10:53:29,345 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-23 06:00:00 
+2021-09-01 10:53:29,345 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052312 :  
+2021-09-01 10:53:29,346 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:53:29,346 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052312/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:38,257 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-23 07:00:00 -> 2021-05-23 12:00:00 
+2021-09-01 10:53:38,259 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-23 12:00:00 
+2021-09-01 10:53:38,260 : INFO : get_water_levels63 : GetADCIRC : adda_services : datecyc 2021052318 :  
+2021-09-01 10:53:38,260 : INFO : get_water_levels63 : GetADCIRC : adda_services :    Loading ...  
+2021-09-01 10:53:38,260 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : http://tds.renci.org:8080/thredds/dodsC/2021/nam/2021052318/hsofs/hatteras.renci.org/hsofs-nam-bob-2021/nowcast/fort.63.nc 
+2021-09-01 10:53:47,163 : DEBUG : get_water_levels63 : GetADCIRC : adda_services :  df_sub time range = 2021-05-23 13:00:00 -> 2021-05-23 18:00:00 
+2021-09-01 10:53:47,166 : DEBUG : get_water_levels63 : GetADCIRC : adda_services : df_concat time range = 2021-05-21 13:00:00 -> 2021-05-23 18:00:00 
+2021-09-01 10:53:47,166 : INFO : get_water_levels63 : GetADCIRC : adda_services : Updating internal time range to reflect data values 
+2021-09-01 10:53:47,166 : INFO : get_water_levels63 : GetADCIRC : adda_services : water_levels_63: ADC actual time range 2021-05-21 13:00:00 2021-05-23 18:00:00 
+2021-09-01 10:53:47,184 : INFO : writeToJSON : GetADCIRC : adda_services : User requests write data also as a JSON format 
+2021-09-01 10:53:47,184 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Begin processing DICT data format 
+2021-09-01 10:53:47,213 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Constructed DICT time series data 
+2021-09-01 10:53:47,225 : INFO : writeDictToJson : utilities : adda_services : Wrote JSON file ./TEST3/adc_wl_nowcast_nowcast.json 
+2021-09-01 10:53:47,225 : INFO : writeToJSON : GetADCIRC : adda_services : Wrote ADC Json as ./TEST3/adc_wl_nowcast_nowcast.json 
+2021-09-01 10:53:47,227 : INFO : main : execute_APSVIZ_pipeline : adda_services : Completed ADCIRC synoptic nowcast Reads 
+2021-09-01 10:53:47,227 : INFO : main : execute_APSVIZ_pipeline : adda_services : Fetch Observations 
+2021-09-01 10:53:47,227 : INFO : main : execute_APSVIZ_pipeline : adda_services : ADC provided times are 20210521 13:00 and 20210523 18:00 
+2021-09-01 10:53:47,263 : INFO : __init__ : GetObsStations : adda_services : PRODUCT to fetch is water_level 
+2021-09-01 10:53:47,263 : INFO : __init__ : GetObsStations : adda_services : Value of input knockout None 
+2021-09-01 10:53:47,263 : INFO : fetchStationNodeList : GetObsStations : adda_services : grid file specified at the CLI. Attempt to use /projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/get_obs_stations/../config/CERA_NOAA_HSOFS_stations_V2.csv 
+2021-09-01 10:53:47,270 : INFO : exec_observables : execute_APSVIZ_pipeline : adda_services : Grabing station list from OBS YML 
+2021-09-01 10:53:47,271 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : grid file specified. Attempt to use /projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/get_obs_stations/../config/CERA_NOAA_HSOFS_stations_V2.csv 
+2021-09-01 10:53:47,275 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : Update file dict 
+2021-09-01 10:53:47,275 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : Final Metadata products 
+2021-09-01 10:53:47,276 : INFO : fetchStationSmoothedHourlyProductFromIDlist : GetObsStations : adda_services : Smoothing will be centered windows of width 11 
+2021-09-01 10:53:47,276 : INFO : processToStationFormat : GetObsStations : adda_services : processToStationFormat is only %Y%m%d %H:%M for now 
+2021-09-01 10:53:47,276 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : station IDlist timein 2021-05-21 13:00:00 and timeout 2021-05-23 18:00:00 
+2021-09-01 10:53:47,276 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : User supplied INTERVAL is None 
+2021-09-01 10:53:47,276 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8410140 
+2021-09-01 10:53:55,808 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8413320 
+2021-09-01 10:53:56,849 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8418150 
+2021-09-01 10:53:57,672 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8419317 
+2021-09-01 10:53:58,728 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8443970 
+2021-09-01 10:53:59,455 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8447930 
+2021-09-01 10:54:00,526 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8449130 
+2021-09-01 10:54:01,620 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8461490 
+2021-09-01 10:54:02,588 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8465705 
+2021-09-01 10:54:04,344 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8467150 
+2021-09-01 10:54:05,486 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8510560 
+2021-09-01 10:54:06,423 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8516945 
+2021-09-01 10:54:08,083 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8518750 
+2021-09-01 10:54:08,957 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8531680 
+2021-09-01 10:54:10,306 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8534720 
+2021-09-01 10:54:11,072 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8536110 
+2021-09-01 10:54:12,252 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8557380 
+2021-09-01 10:54:13,522 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8570283 
+2021-09-01 10:54:14,397 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8635750 
+2021-09-01 10:54:15,736 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8638901 
+2021-09-01 10:54:16,497 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8651370 
+2021-09-01 10:54:17,764 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8656483 
+2021-09-01 10:54:18,731 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8658163 
+2021-09-01 10:54:19,756 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8661070 
+2021-09-01 10:54:20,798 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8665530 
+2021-09-01 10:54:21,824 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8670870 
+2021-09-01 10:54:22,968 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8720030 
+2021-09-01 10:54:24,227 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8720218 
+2021-09-01 10:54:25,359 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8721604 
+2021-09-01 10:54:26,454 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8722670 
+2021-09-01 10:54:27,534 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8723214 
+2021-09-01 10:54:28,755 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8723970 
+2021-09-01 10:54:29,921 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8724580 
+2021-09-01 10:54:30,941 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8725110 
+2021-09-01 10:54:32,033 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8726724 
+2021-09-01 10:54:33,475 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8727520 
+2021-09-01 10:54:34,384 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8729210 
+2021-09-01 10:54:35,279 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8729840 
+2021-09-01 10:54:36,273 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8735180 
+2021-09-01 10:54:37,223 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8747437 
+2021-09-01 10:54:38,161 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8760721 
+2021-09-01 10:54:38,929 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8761305 
+2021-09-01 10:54:39,727 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8761724 
+2021-09-01 10:54:40,911 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8764314 
+2021-09-01 10:54:41,961 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8766072 
+2021-09-01 10:54:43,083 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8768094 
+2021-09-01 10:54:44,328 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8770822 
+2021-09-01 10:54:45,063 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8772471 
+2021-09-01 10:54:45,884 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8773767 
+2021-09-01 10:54:46,604 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8775241 
+2021-09-01 10:54:47,350 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8775870 
+2021-09-01 10:54:48,552 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8779748 
+2021-09-01 10:54:49,315 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Length of stations for product fetch is 52. 
+2021-09-01 10:54:49,766 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Final detailed data product: Number of times 531. Num Stations 52 
+2021-09-01 10:54:49,767 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Writing PKL for detailed 6min data 
+2021-09-01 10:54:49,777 : INFO : removeMissingProducts : GetObsStations : adda_services : removeMissingness called by EX_THRESH set to False: Ignore 
+2021-09-01 10:54:49,795 : INFO : fetchStationSmoothedHourlyProductFromIDlist : GetObsStations : adda_services : Smoothed hourly data product: Number of times 54. Num Stations 52 
+2021-09-01 10:54:49,795 : INFO : fetchStationSmoothedHourlyProductFromIDlist : GetObsStations : adda_services : Writing PKL for Smoothed hourly data 
+2021-09-01 10:54:49,797 : DEBUG : buildURLsForStationPlotting : GetObsStations : adda_services : Write URLs timein 20210521 13:00 timeout 20210523 18:00 station_timein 20210521 station_timeout 20210523 
+2021-09-01 10:54:49,800 : DEBUG : buildURLsForStationPlotting : GetObsStations : adda_services : Test class-base url code: Not for production use 
+2021-09-01 10:54:49,800 : INFO : writeFilesToDisk : GetObsStations : adda_services : Amending OBS filenames with None 
+2021-09-01 10:54:49,800 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing META file(s) to disk 
+2021-09-01 10:54:49,831 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing DETAILED file(s) to disk 
+2021-09-01 10:54:49,860 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing excluded stations to disk 
+2021-09-01 10:54:49,880 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing Smoothed file(s) to disk 
+2021-09-01 10:54:49,892 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing station urls to disk 
+2021-09-01 10:54:49,899 : INFO : main : execute_APSVIZ_pipeline : adda_services : Completed OBS: Wrote Station files: Detailed ./TEST3/obs_water_level_detailed.pkl Smoothed ./TEST3/obs_water_level_smoothed_11.pkl Meta ./TEST3/obs_water_level_metadata.pkl URL ./TEST3/obs_water_level_urls.csv Excluded ./TEST3/obs_water_level_exclude.csv MetaJ ./TEST3/obs_water_level_metadata.json, DetailedJ ./TEST3/obs_water_level_detailed.json, SmoothedJ ./TEST3/obs_water_level_smoothed_11.json 
+2021-09-01 10:54:49,899 : INFO : exec_observables_tidalpredictions : execute_APSVIZ_pipeline : adda_services : Fetching HOURLY Tidal Predictions WL for observations 
+2021-09-01 10:54:49,905 : INFO : __init__ : GetObsStations : adda_services : PRODUCT to fetch is predictions 
+2021-09-01 10:54:49,905 : INFO : __init__ : GetObsStations : adda_services : Value of input knockout None 
+2021-09-01 10:54:49,905 : INFO : fetchStationNodeList : GetObsStations : adda_services : grid file specified at the CLI. Attempt to use /projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/get_obs_stations/../config/CERA_NOAA_HSOFS_stations_V2.csv 
+2021-09-01 10:54:49,917 : INFO : exec_observables_tidalpredictions : execute_APSVIZ_pipeline : adda_services : Grabing station list from OBS YML 
+2021-09-01 10:54:49,918 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : grid file specified. Attempt to use /projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/get_obs_stations/../config/CERA_NOAA_HSOFS_stations_V2.csv 
+2021-09-01 10:54:49,923 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : Update file dict 
+2021-09-01 10:54:49,923 : INFO : fetchStationMetaDataFromIDs : GetObsStations : adda_services : Final Metadata products 
+2021-09-01 10:54:49,924 : INFO : processToStationFormat : GetObsStations : adda_services : processToStationFormat is only %Y%m%d %H:%M for now 
+2021-09-01 10:54:49,924 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : station IDlist timein 2021-05-21 13:00:00 and timeout 2021-05-27 06:00:00 
+2021-09-01 10:54:49,924 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : User supplied INTERVAL is h 
+2021-09-01 10:54:49,924 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8410140 
+2021-09-01 10:54:50,689 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8413320 
+2021-09-01 10:54:51,298 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8418150 
+2021-09-01 10:54:51,992 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8419317 
+2021-09-01 10:54:52,892 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8443970 
+2021-09-01 10:54:53,867 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8447930 
+2021-09-01 10:54:54,454 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8449130 
+2021-09-01 10:54:55,205 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8461490 
+2021-09-01 10:54:55,985 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8465705 
+2021-09-01 10:54:57,390 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8467150 
+2021-09-01 10:54:58,101 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8510560 
+2021-09-01 10:54:58,812 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8516945 
+2021-09-01 10:54:59,950 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8518750 
+2021-09-01 10:55:00,593 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8531680 
+2021-09-01 10:55:01,895 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8534720 
+2021-09-01 10:55:02,437 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8536110 
+2021-09-01 10:55:03,560 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8557380 
+2021-09-01 10:55:04,501 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8570283 
+2021-09-01 10:55:05,449 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8635750 
+2021-09-01 10:55:06,463 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8638901 
+2021-09-01 10:55:07,070 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8651370 
+2021-09-01 10:55:07,967 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8656483 
+2021-09-01 10:55:08,790 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8658163 
+2021-09-01 10:55:09,556 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8661070 
+2021-09-01 10:55:10,333 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8665530 
+2021-09-01 10:55:11,076 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8670870 
+2021-09-01 10:55:11,936 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8720030 
+2021-09-01 10:55:12,776 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8720218 
+2021-09-01 10:55:13,727 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8721604 
+2021-09-01 10:55:14,573 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8722670 
+2021-09-01 10:55:15,359 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8723214 
+2021-09-01 10:55:16,093 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8723970 
+2021-09-01 10:55:16,721 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8724580 
+2021-09-01 10:55:17,499 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8725110 
+2021-09-01 10:55:18,386 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8726724 
+2021-09-01 10:55:19,359 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8727520 
+2021-09-01 10:55:19,945 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8729210 
+2021-09-01 10:55:20,467 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8729840 
+2021-09-01 10:55:21,269 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8735180 
+2021-09-01 10:55:21,937 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8747437 
+2021-09-01 10:55:22,643 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8760721 
+2021-09-01 10:55:23,135 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8761305 
+2021-09-01 10:55:23,787 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8761724 
+2021-09-01 10:55:24,678 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8764314 
+2021-09-01 10:55:25,374 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8766072 
+2021-09-01 10:55:26,162 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8768094 
+2021-09-01 10:55:27,252 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8770822 
+2021-09-01 10:55:27,715 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8772471 
+2021-09-01 10:55:28,330 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8773767 
+2021-09-01 10:55:28,753 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8775241 
+2021-09-01 10:55:29,398 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8775870 
+2021-09-01 10:55:30,108 : DEBUG : fetchStationProductFromIDlist : GetObsStations : adda_services : Fetch station 8779748 
+2021-09-01 10:55:30,672 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Length of stations for product fetch is 52. 
+2021-09-01 10:55:30,680 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Final detailed data product: Number of times 138. Num Stations 52 
+2021-09-01 10:55:30,680 : INFO : fetchStationProductFromIDlist : GetObsStations : adda_services : Writing PKL for detailed 6min data 
+2021-09-01 10:55:30,682 : DEBUG : buildURLsForStationPlotting : GetObsStations : adda_services : Write URLs timein 20210521 13:00 timeout 2021-05-27 06:00:00 station_timein 20210521 station_timeout 20210527 
+2021-09-01 10:55:30,685 : DEBUG : buildURLsForStationPlotting : GetObsStations : adda_services : Test class-base url code: Not for production use 
+2021-09-01 10:55:30,685 : INFO : writeFilesToDisk : GetObsStations : adda_services : Amending OBS filenames with TP 
+2021-09-01 10:55:30,685 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing META file(s) to disk 
+2021-09-01 10:55:30,695 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing DETAILED file(s) to disk 
+2021-09-01 10:55:30,705 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing excluded stations to disk 
+2021-09-01 10:55:30,709 : INFO : writeFilesToDisk : GetObsStations : adda_services : Writing station urls to disk 
+2021-09-01 10:55:30,714 : INFO : main : execute_APSVIZ_pipeline : adda_services : Completed Todal Predictions OBS: Wrote Station files: Detailed ./TEST3/obs_TP_predictions_detailed_h.pkl Smoothed ./TEST3/obs_TP_predictions_detailed_h.pkl Meta ./TEST3/obs_TP_predictions_metadata.pkl URL ./TEST3/obs_TP_predictions_urls.csv Excluded ./TEST3/obs_TP_predictions_exclude.csv MetaJ ./TEST3/obs_TP_predictions_metadata.json, DetailedJ ./TEST3/obs_TP_predictions_detailed_h.json, SmoothedJ ./TEST3/obs_TP_predictions_detailed_h.json 
+2021-09-01 10:55:30,716 : INFO : main : execute_APSVIZ_pipeline : adda_services : Write tidal predictions to data also as a JSON format 
+2021-09-01 10:55:30,716 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Begin processing DICT data format 
+2021-09-01 10:55:30,726 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Constructed DICT time series data 
+2021-09-01 10:55:30,747 : INFO : writeDictToJson : utilities : adda_services : Wrote JSON file ./TEST3/NOAA_tidalpredictions.json 
+2021-09-01 10:55:30,747 : INFO : main : execute_APSVIZ_pipeline : adda_services : Wrote ADC Json as ./TEST3/NOAA_tidalpredictions.json 
+2021-09-01 10:55:30,747 : INFO : main : execute_APSVIZ_pipeline : adda_services : Residual/Error computation NOTIDAL corrections 
+2021-09-01 10:55:30,747 : INFO : __init__ : computeErrorField : adda_services : Reading the yml file 
+2021-09-01 10:55:30,759 : DEBUG : __init__ : computeErrorField : adda_services : ADCF filename ./TEST3/adc_wl_nowcast_nowcast.pkl 
+2021-09-01 10:55:30,759 : DEBUG : __init__ : computeErrorField : adda_services : OBSF filename ./TEST3/obs_water_level_smoothed_11.pkl 
+2021-09-01 10:55:30,833 : DEBUG : __init__ : computeErrorField : adda_services : input ADC wl data are                       8410140   8413320   8418150   8419317   8443970  ...   8772471   8773767   8775241   8775870   8779748
+2021-05-21 13:00:00  1.137643  0.474610  0.563922  0.578739  0.711277  ...  0.231812  0.217950  0.173470  0.172341  0.165750
+2021-05-21 14:00:00  0.103384 -0.194084 -0.037336  0.004628  0.105267  ...  0.277934  0.234020  0.212192  0.213963  0.202018
+2021-05-21 15:00:00 -1.073168 -0.832664 -0.606842 -0.564240 -0.489905  ...  0.330713  0.256921  0.259847  0.264254  0.241352
+2021-05-21 16:00:00 -1.917280 -1.268830 -1.042867 -0.987701 -1.011164  ...  0.374370  0.279632  0.295737  0.298594  0.273063
+2021-05-21 17:00:00 -2.178504 -1.380707 -1.238949 -1.173235 -1.173460  ...  0.405687  0.301284  0.314343  0.315308  0.293762
+2021-05-21 18:00:00 -1.976208 -1.098749 -1.107922 -1.085590 -1.178092  ...  0.422300  0.306076  0.321405  0.324398  0.298076
+2021-05-21 19:00:00 -1.322307 -0.620480 -0.705849 -0.685882 -0.852220  ...  0.415813  0.305932  0.309501  0.307384  0.286410
+2021-05-21 20:00:00 -0.305958  0.064403 -0.051023 -0.080790 -0.265279  ...  0.397458  0.304371  0.286172  0.285820  0.267741
+2021-05-21 21:00:00  0.808254  0.700128  0.539281  0.513761  0.457105  ...  0.385356  0.298001  0.261526  0.258831  0.242806
+2021-05-21 22:00:00  1.768227  1.230510  1.026716  0.989750  0.975467  ...  0.374619  0.293468  0.240283  0.234950  0.215223
+2021-05-21 23:00:00  2.293119  1.417168  1.273774  1.238824  1.240085  ...  0.362758  0.288431  0.223409  0.218248  0.197114
+2021-05-22 00:00:00  2.186133  1.316149  1.244552  1.216681  1.170851  ...  0.363971  0.284389  0.216624  0.209025  0.190704
+2021-05-22 01:00:00  1.602192  0.826161  0.881403  0.908091  1.039942  ...  0.394849  0.294588  0.233465  0.230966  0.202988
+2021-05-22 02:00:00  0.739340  0.216385  0.346050  0.382263  0.465598  ...  0.439882  0.325719  0.283447  0.274319  0.224409
+2021-05-22 03:00:00 -0.426681 -0.490902 -0.290482 -0.232426 -0.111149  ...  0.499621  0.368826  0.332177  0.320069  0.252478
+2021-05-22 04:00:00 -1.561583 -1.058427 -0.809826 -0.746205 -0.768762  ...  0.560782  0.410949  0.386461  0.374460  0.293473
+2021-05-22 05:00:00 -2.128772 -1.388341 -1.164961 -1.081418 -1.139112  ...  0.605203  0.445670  0.426937  0.410955  0.329990
+2021-05-22 06:00:00 -2.141455 -1.291607 -1.222044 -1.158453 -1.203217  ...  0.630539  0.483682  0.453169  0.427733  0.338929
+2021-05-22 07:00:00 -1.748230 -0.904463 -0.968143 -0.914496 -1.104677  ...  0.645711  0.504772  0.455990  0.425539  0.330836
+2021-05-22 08:00:00 -0.877371 -0.287518 -0.401774 -0.387496 -0.608418  ...  0.623863  0.478101  0.426737  0.402465  0.323161
+2021-05-22 09:00:00  0.232670  0.405978  0.254122  0.243601  0.080339  ...  0.568510  0.448522  0.391801  0.377339  0.307637
+2021-05-22 10:00:00  1.343979  1.022344  0.842957  0.795639  0.736354  ...  0.495952  0.425693  0.351904  0.328444  0.276916
+2021-05-22 11:00:00  2.166016  1.409619  1.222040  1.177369  1.176001  ...  0.445517  0.408709  0.314195  0.288302  0.239852
+2021-05-22 12:00:00  2.381385  1.440343  1.314880  1.296840  1.241448  ...  0.409864  0.386791  0.291521  0.267964  0.219807
+2021-05-22 13:00:00  1.978584  1.108187  1.104385  1.095818  1.112645  ...  0.381785  0.377889  0.289850  0.272943  0.223245
+2021-05-22 14:00:00  1.214405  0.516149  0.617269  0.638917  0.764944  ...  0.366860  0.380347  0.298020  0.286070  0.234029
+2021-05-22 15:00:00  0.141240 -0.197133 -0.027346  0.040724  0.121281  ...  0.386277  0.391470  0.303620  0.295078  0.246811
+2021-05-22 16:00:00 -1.123939 -0.862124 -0.633531 -0.556957 -0.501254  ...  0.410253  0.391506  0.312760  0.306013  0.260904
+2021-05-22 17:00:00 -2.040770 -1.326822 -1.084858 -0.983277 -1.075102  ...  0.414289  0.389618  0.315520  0.311516  0.270727
+2021-05-22 18:00:00 -2.309490 -1.435331 -1.290590 -1.167601 -1.231350  ...  0.402919  0.378789  0.307412  0.304744  0.260063
+2021-05-22 19:00:00 -2.026290 -1.112464 -1.139144 -1.046908 -1.217189  ...  0.377767  0.354605  0.269238  0.264776  0.230039
+2021-05-22 20:00:00 -1.328063 -0.569963 -0.677164 -0.620980 -0.852535  ...  0.327625  0.318569  0.210339  0.203869  0.185127
+2021-05-22 21:00:00 -0.212205  0.189269  0.029463  0.008720 -0.201061  ...  0.263200  0.280787  0.152138  0.147698  0.134112
+2021-05-22 22:00:00  0.994000  0.870698  0.682091  0.648180  0.563220  ...  0.202217  0.247957  0.106553  0.102662  0.083651
+2021-05-22 23:00:00  2.032124  1.431657  1.191154  1.165627  1.144792  ...  0.142799  0.220990  0.069666  0.064465  0.043466
+2021-05-23 00:00:00  2.568845  1.598998  1.430487  1.410674  1.408540  ...  0.105447  0.196136  0.037843  0.032190  0.017849
+2021-05-23 01:00:00  2.404681  1.467949  1.378403  1.360031  1.307437  ...  0.089970  0.180610  0.030995  0.033533  0.016650
+2021-05-23 02:00:00  1.741436  0.893345  0.951769  0.975159  1.111574  ...  0.098738  0.181108  0.051189  0.055729  0.036898
+2021-05-23 03:00:00  0.763996  0.197893  0.329686  0.376715  0.484520  ...  0.148530  0.202555  0.101959  0.108099  0.075712
+2021-05-23 04:00:00 -0.525026 -0.588571 -0.383670 -0.301787 -0.180810  ...  0.230230  0.233345  0.168321  0.174306  0.128872
+2021-05-23 05:00:00 -1.771326 -1.204685 -0.961169 -0.855090 -0.902112  ...  0.315079  0.267106  0.232459  0.239381  0.186577
+2021-05-23 06:00:00 -2.385127 -1.568811 -1.341471 -1.209380 -1.323009  ...  0.389848  0.295440  0.276570  0.288717  0.229540
+2021-05-23 07:00:00 -2.401840 -1.452530 -1.402618 -1.290662 -1.404228  ...  0.441650  0.320707  0.301588  0.308359  0.254090
+2021-05-23 08:00:00 -1.913450 -1.023045 -1.125625 -1.047226 -1.271546  ...  0.458575  0.328512  0.310451  0.313458  0.262689
+2021-05-23 09:00:00 -0.988293 -0.342825 -0.508411 -0.480593 -0.742137  ...  0.446663  0.329007  0.305177  0.304778  0.253359
+2021-05-23 10:00:00  0.256389  0.406881  0.215321  0.201798  0.015907  ...  0.418296  0.323768  0.285473  0.282596  0.234586
+2021-05-23 11:00:00  1.446829  1.059597  0.836363  0.789807  0.731099  ...  0.375144  0.310817  0.250185  0.243500  0.209832
+2021-05-23 12:00:00  2.283651  1.455352  1.220635  1.186915  1.188336  ...  0.328811  0.293922  0.215944  0.207153  0.176199
+2021-05-23 13:00:00  2.485949  1.473229  1.325614  1.297586  1.249992  ...  0.284042  0.278472  0.190589  0.181984  0.151470
+2021-05-23 14:00:00  2.008309  1.092907  1.074062  1.060993  1.087523  ...  0.246667  0.268531  0.176961  0.171023  0.142645
+2021-05-23 15:00:00  1.169459  0.438618  0.539647  0.549787  0.711618  ...  0.236014  0.266119  0.178679  0.175672  0.142614
+2021-05-23 16:00:00  0.013472 -0.334787 -0.164516 -0.094294  0.008924  ...  0.245591  0.264246  0.184270  0.182025  0.147594
+2021-05-23 17:00:00 -1.330689 -1.029912 -0.803100 -0.719501 -0.650426  ...  0.254874  0.263269  0.185671  0.184187  0.151960
+2021-05-23 18:00:00 -2.305715 -1.505411 -1.252849 -1.163860 -1.281047  ...  0.250745  0.253278  0.178196  0.176006  0.144194
+
+[54 rows x 52 columns] 
+2021-09-01 10:55:30,902 : DEBUG : __init__ : computeErrorField : adda_services : input OBS wl data are stationid             8410140   8413320   8418150   8419317   8443970  ...   8772471   8773767   8775241   8775870   8779748
+date_time                                                              ...                                                  
+2021-05-21 13:00:00  0.829000  0.350000  0.510000  0.534000  0.599000  ...  0.487000  0.531000  0.433000  0.439000  0.339000
+2021-05-21 14:00:00 -0.270273 -0.412727 -0.123818 -0.051000  0.078636  ...  0.585455  0.553455  0.489273  0.499273  0.392091
+2021-05-21 15:00:00 -1.369364 -1.051545 -0.748818 -0.674273 -0.553182  ...  0.639364  0.551545  0.528000  0.549455  0.423818
+2021-05-21 16:00:00 -2.284455 -1.495000 -1.219818 -1.153909 -1.102727  ...  0.697364  0.561818  0.533727  0.565364  0.456909
+2021-05-21 17:00:00 -2.703091 -1.630364 -1.436545 -1.369091 -1.439636  ...  0.724364  0.593545  0.557909  0.581273  0.499000
+2021-05-21 18:00:00 -2.373091 -1.396545 -1.332455 -1.275818 -1.361909  ...  0.766727  0.619364  0.572273  0.598545  0.510909
+2021-05-21 19:00:00 -1.489727 -0.838818 -0.941818 -0.909909 -0.979636  ...  0.768182  0.615273  0.561455  0.586909  0.510455
+2021-05-21 20:00:00 -0.331636 -0.095364 -0.356182 -0.366727 -0.473364  ...  0.712182  0.616727  0.531273  0.539455  0.500727
+2021-05-21 21:00:00  0.878909  0.632182  0.292000  0.226727  0.128636  ...  0.666273  0.610182  0.517364  0.507909  0.488000
+2021-05-21 22:00:00  1.910818  1.153273  0.825000  0.772545  0.728636  ...  0.642727  0.582364  0.525273  0.503909  0.451091
+2021-05-21 23:00:00  2.403273  1.382909  1.118364  1.093636  1.108182  ...  0.665091  0.589273  0.490909  0.490273  0.426727
+2021-05-22 00:00:00  2.186364  1.265909  1.140545  1.128636  1.173545  ...  0.697000  0.609000  0.511818  0.468636  0.423909
+2021-05-22 01:00:00  1.479818  0.807364  0.881818  0.882273  0.947182  ...  0.746909  0.615273  0.535273  0.528909  0.434818
+2021-05-22 02:00:00  0.459364  0.128091  0.355727  0.401727  0.481000  ...  0.803727  0.675182  0.589273  0.575091  0.463273
+2021-05-22 03:00:00 -0.672636 -0.599182 -0.284818 -0.211818 -0.097545  ...  0.822727  0.727727  0.639182  0.635182  0.472636
+2021-05-22 04:00:00 -1.726091 -1.137000 -0.848636 -0.783545 -0.706909  ...  0.866545  0.742818  0.664545  0.679364  0.491091
+2021-05-22 05:00:00 -2.444182 -1.456182 -1.192727 -1.143818 -1.169818  ...  0.894909  0.731545  0.695273  0.710273  0.516455
+2021-05-22 06:00:00 -2.500545 -1.388455 -1.249182 -1.205545 -1.319182  ...  0.921818  0.679091  0.704000  0.746455  0.532000
+2021-05-22 07:00:00 -1.854909 -1.004000 -1.006909 -0.969545 -1.050364  ...  0.916818  0.609455  0.699091  0.738273  0.510273
+2021-05-22 08:00:00 -0.785182 -0.311727 -0.494364 -0.497364 -0.595364  ...  0.894909  0.612364  0.640909  0.668273  0.490636
+2021-05-22 09:00:00  0.441909  0.439545  0.164091  0.099455 -0.015000  ...  0.790636  0.627727  0.584091  0.617182  0.466273
+2021-05-22 10:00:00  1.614182  1.070182  0.759909  0.681000  0.611273  ...  0.638727  0.661273  0.581091  0.581091  0.452727
+2021-05-22 11:00:00  2.407545  1.431727  1.156727  1.102909  1.088727  ...  0.585000  0.714364  0.595364  0.573909  0.433727
+2021-05-22 12:00:00  2.510091  1.457636  1.266818  1.240727  1.294273  ...  0.574000  0.732091  0.565545  0.536636  0.415727
+2021-05-22 13:00:00  1.959636  1.097000  1.098455  1.085727  1.158273  ...  0.655636  0.682636  0.557818  0.557455  0.445182
+2021-05-22 14:00:00  1.000273  0.451636  0.641364  0.666818  0.746818  ...  0.633182  0.642455  0.592364  0.584545  0.472909
+2021-05-22 15:00:00 -0.168455 -0.341364 -0.029636  0.061273  0.174455  ...  0.625636  0.667091  0.638091  0.649364  0.487636
+2021-05-22 16:00:00 -1.347909 -1.039182 -0.718273 -0.611455 -0.498455  ...  0.677909  0.676000  0.642091  0.647818  0.516909
+2021-05-22 17:00:00 -2.345909 -1.491273 -1.218000 -1.108636 -1.108273  ...  0.766909  0.676273  0.627091  0.648455  0.540000
+2021-05-22 18:00:00 -2.773182 -1.609091 -1.415182 -1.306182 -1.441636  ...  0.748545  0.658091  0.621182  0.653182  0.546636
+2021-05-22 19:00:00 -2.401455 -1.328545 -1.281364 -1.185091 -1.336818  ...  0.694182  0.641182  0.600455  0.614545  0.530364
+2021-05-22 20:00:00 -1.451182 -0.711636 -0.836182 -0.772455 -0.907727  ...  0.644364  0.610727  0.559273  0.583000  0.519273
+2021-05-22 21:00:00 -0.167545  0.111273 -0.168273 -0.179636 -0.311545  ...  0.589000  0.553636  0.517636  0.525727  0.491000
+2021-05-22 22:00:00  1.177364  0.900818  0.548364  0.468182  0.375455  ...  0.531182  0.497273  0.451727  0.483909  0.430000
+2021-05-22 23:00:00  2.308636  1.460545  1.117273  1.036818  1.021636  ...  0.464273  0.457273  0.399273  0.430727  0.398727
+2021-05-23 00:00:00  2.833091  1.697455  1.407273  1.363273  1.411818  ...  0.426909  0.459182  0.369818  0.424818  0.369636
+2021-05-23 01:00:00  2.568364  1.527273  1.416000  1.387727  1.436000  ...  0.430091  0.461364  0.423909  0.461091  0.380909
+2021-05-23 02:00:00  1.764636  0.990455  1.064727  1.072455  1.178909  ...  0.500182  0.524545  0.460273  0.436727  0.405273
+2021-05-23 03:00:00  0.606909  0.196455  0.440818  0.511364  0.611818  ...  0.572909  0.564727  0.489364  0.480727  0.440818
+2021-05-23 04:00:00 -0.647455 -0.615364 -0.284182 -0.182636 -0.045364  ...  0.661909  0.616727  0.554182  0.545545  0.494545
+2021-05-23 05:00:00 -1.854364 -1.261545 -0.951364 -0.866909 -0.740818  ...  0.732455  0.643091  0.597727  0.591909  0.519000
+2021-05-23 06:00:00 -2.676636 -1.597545 -1.354727 -1.272727 -1.321455  ...  0.793455  0.654273  0.639000  0.652545  0.562727
+2021-05-23 07:00:00 -2.758091 -1.535455 -1.408727 -1.333636 -1.478182  ...  0.826545  0.661545  0.655727  0.648909  0.582273
+2021-05-23 08:00:00 -2.028636 -1.072364 -1.111182 -1.057455 -1.169364  ...  0.834545  0.662000  0.646182  0.649455  0.568273
+2021-05-23 09:00:00 -0.842545 -0.315455 -0.525727 -0.529364 -0.645000  ...  0.777727  0.646545  0.610455  0.577909  0.554545
+2021-05-23 10:00:00  0.517818  0.516182  0.179364  0.110273 -0.008455  ...  0.685636  0.643636  0.578545  0.551364  0.545273
+2021-05-23 11:00:00  1.804455  1.195273  0.840273  0.747273  0.683273  ...  0.628818  0.651636  0.592000  0.568273  0.528636
+2021-05-23 12:00:00  2.665364  1.588000  1.265455  1.209091  1.201545  ...  0.650545  0.679273  0.606273  0.566273  0.496545
+2021-05-23 13:00:00  2.765364  1.593818  1.370455  1.350182  1.423455  ...  0.633000  0.676364  0.562091  0.519545  0.479455
+2021-05-23 14:00:00  2.135636  1.189455  1.153727  1.154273  1.214000  ...  0.642545  0.625364  0.568909  0.535636  0.486000
+2021-05-23 15:00:00  1.073636  0.486545  0.654364  0.693636  0.780364  ...  0.621000  0.667182  0.622273  0.585091  0.493000
+2021-05-23 16:00:00 -0.190636 -0.377273 -0.067000  0.024182  0.150636  ...  0.642818  0.699182  0.637455  0.618818  0.498091
+2021-05-23 17:00:00 -1.451727 -1.090818 -0.798182 -0.707000 -0.570727  ...  0.705545  0.701545  0.636273  0.635636  0.520364
+2021-05-23 18:00:00 -2.524000 -1.584000 -1.339000 -1.268000 -1.209000  ...  0.740000  0.676000  0.612000  0.615000  0.529000
+
+[54 rows x 52 columns] 
+2021-09-01 10:55:30,902 : INFO : _intersectionStations : computeErrorField : adda_services : Number of intersected stations is 52 
+2021-09-01 10:55:30,903 : INFO : _intersectionTimes : computeErrorField : adda_services : Number of intersected times is 54 
+2021-09-01 10:55:30,904 : DEBUG : _applyTimeBounds : computeErrorField : adda_services : Start time bounds 
+2021-09-01 10:55:30,904 : INFO : _applyTimeBounds : computeErrorField : adda_services : bounds (inclusive) lo and hi are 2021-05-21 19:00:00 2021-05-23 18:00:00 
+2021-09-01 10:55:30,906 : INFO : _applyTimeBounds : computeErrorField : adda_services : After bounds constraint sizes are ADC (48, 52) OBS (48, 52) 
+2021-09-01 10:55:30,919 : INFO : _computeErrors : computeErrorField : adda_services : Averaging: Not performed 
+2021-09-01 10:55:30,925 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Begin processing DICT data format 
+2021-09-01 10:55:30,962 : INFO : convertTimeseriesToDICTdata : utilities : adda_services : Constructed DICT time series data 
+2021-09-01 10:55:31,021 : INFO : writeDictToJson : utilities : adda_services : Wrote JSON file ./TEST3/adc_obs_error_merged.json 
+2021-09-01 10:55:31,021 : INFO : _outputDataToFiles : computeErrorField : adda_services : save averaging files ./TEST3/stationSummaryAves.csv and ./TEST3/stationPeriodAves.csv and ./TEST3/stationMetaData.csv and ./TEST3/tideTimeErrors.pkl and ./TEST3/adc_obs_error_merged.csv and ./TEST3/adc_obs_error_merged.json 
+2021-09-01 10:55:31,021 : INFO : main : execute_APSVIZ_pipeline : adda_services : Completed ERR 
+2021-09-01 10:55:31,021 : INFO : main : execute_APSVIZ_pipeline : adda_services : PNG plotter dict is {'META': './TEST3/obs_water_level_metadata.json', 'FORECAST': './TEST3/adc_wl_forecast.json', 'NOAATIDAL': './TEST3/NOAA_tidalpredictions.json', 'DIFFS': './TEST3/adc_obs_error_merged.json'} 
+2021-09-01 10:55:31,021 : INFO : exec_pngs : execute_APSVIZ_pipeline : adda_services : Begin Generation of station-specific PNG insets 
+2021-09-01 10:55:31,021 : INFO : __init__ : stationPlotter : adda_services : Invoke station-level PNG generation 
+2021-09-01 10:55:31,046 : INFO : generatePNGs : stationPlotter : adda_services : Total intersected stations 52 
+2021-09-01 10:55:31,046 : INFO : generatePNGs : stationPlotter : adda_services : Set of variables is ['ADCForecast', 'NOAAPrediction', 'ADC', 'OBS', 'ERR'] 
+2021-09-01 10:55:31,047 : INFO : generatePNGs : stationPlotter : adda_services : Removing a station for nans 8536110 
+2021-09-01 10:55:45,181 : INFO : main : execute_APSVIZ_pipeline : adda_services : Wrote pipeline StationMetadata to ./TEST3/stationProps.csv 
+2021-09-01 10:55:45,185 : INFO : writeDictToJson : utilities : adda_services : Wrote JSON file ./TEST3/runProps.json 
+2021-09-01 10:55:45,185 : INFO : main : execute_APSVIZ_pipeline : adda_services : Wrote pipeline Dict data to ./TEST3/runProps.json 
+2021-09-01 10:55:45,185 : INFO : main : execute_APSVIZ_pipeline : adda_services : Finished pipeline in 326.6079533100128 s 
+2021-09-01 10:55:45,185 : INFO : main : execute_APSVIZ_pipeline : adda_services : Copied log file ./AdcircSupportTools.log to ./TEST3/logs 

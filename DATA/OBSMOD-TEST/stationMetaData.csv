@@ -1,0 +1,2 @@
+,OBS_filename,ADC_filename,Tide padding,Ave periods,Bounds lo,Bounds hi,Time steps per period,Tidal period 
+0,./TEST3/obs_water_level_smoothed_11.pkl,./TEST3/adc_wl_nowcast_nowcast.pkl,1,4,2021-05-21 19:00:00,2021-05-23 18:00:00,12,12.42
