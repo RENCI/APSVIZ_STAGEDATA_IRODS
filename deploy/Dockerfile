@@ -36,7 +36,7 @@ RUN conda init bash
 RUN git clone https://github.com/RENCI/APSVIZ_STAGEDATA_IRODS.git
 
 # move to the install directory
-WORKDIR ADCIRCSupportTools/deploy
+WORKDIR APSVIZ_STAGEDATA_IRODS/deploy
 
 # install the conda requirements
 RUN conda install --yes --file conda_requirements.txt
