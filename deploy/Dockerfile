@@ -7,7 +7,7 @@
 #       docker push renciorg/stagedata:latest
 ##############
 
-FROM thinkwhere/gdal-python
+FROM continuumio/miniconda3
 
 # set the logging level
 ENV LOG_LEVEL=10
@@ -19,8 +19,18 @@ LABEL maintainer="jtilson@renci.org"
 RUN mkdir /repo
 WORKDIR /repo
 
-# INstall iRODS
-# RUN apt-get install irods-server irods-database-plugin-postgres
+# make sure the container is up-to-date
+RUN apt-get update
+
+# Start off getting Python 3.7.3
+RUN conda install  -y python=3.7.3
+
+# update conda and set the download channel
+RUN conda update conda && \
+    conda config --add channels conda-forge
+
+# tell conda what the shell is
+RUN conda init bash
 
 # get the repos
 RUN git clone https://github.com/RENCI/APSVIZ_STAGEDATA_IRODS.git
@@ -28,8 +38,8 @@ RUN git clone https://github.com/RENCI/APSVIZ_STAGEDATA_IRODS.git
 # move to the install directory
 WORKDIR /repo/APSVIZ_STAGEDATA_IRODS
 
-# install the pip requirements
-RUN pip install -r requirements.txt
+# install the conda requirements
+RUN conda install --yes --file conda_requirements.txt
 
 # set the python path
 ENV PYTHONPATH=/repo/APSVIZ_STAGEDATA_IRODS
