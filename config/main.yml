@@ -2,5 +2,5 @@
 DEFAULT: &default
   RDIR: $RUNTIMEDIR   
   LOGGING: true
-  LOGLEVEL: DEBUG
+  LOGLEVEL: INFO
   GRAPHICS: true
