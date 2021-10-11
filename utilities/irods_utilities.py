@@ -143,10 +143,9 @@ class irods_utilities:
         num=0
         with self._open_connection() as session:
             for fn in filenames: # Irods filenames are OBJECT. Get string name using .name
-                print('new filew {}'.format(fn))
                 localfile="{0}/{1}".format(inlocaldir,fn)
                 irodsfile="{0}/{1}".format(irodsdir,fn)
-                print('Get iRODS file {} to local file {}'.format(irodsfile, localfile))
+                #print('Get iRODS file {} to local file {}'.format(irodsfile, localfile))
                 session.data_objects.get(irodsfile, localfile, **options )
                 num+=1
                 utilities.log.debug('Get iRODS file {} to local file {}'.format(irodsfile, localfile))
@@ -255,6 +254,7 @@ class irods_utilities:
                 filenames=[fn.name for fn in irfilenames] # We want to pass strings to getFile
                 rootfull = self.getIRODSdir(inirodsdir,root.name) # If rootname is the final dir in the inirodsdir then return inirdsdir
                 localdir=self.assembleLocalDirName(rootfull, inlocaldir, inirodsdir) # '/'.join([inlocaldir,root.name])
+                print('make dir {}'.format(localdir))
                 os.makedirs(localdir,mode = 0o777, exist_ok = True)
                 num+=self.getFile(rootfull, localdir, filenames)
         utilities.log.info('Fetched a total of {} files to local'.format(num))
