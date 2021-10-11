@@ -66,27 +66,29 @@ def main(args):
 
     ## PUT a files into a new subcollection
     utilities.log.info('TEST a put')
-    newirodsdir='/'.join([topdir,'test1','test2'])
+    newirodsdir='/'.join([topdir,'TESTS','test1'])
     # Push a single file to the new subcollection
     localfilename=['TEST1234_archive.tar.gz']
     #localfilename=['maxwvel.63.10.10.mbtiles']
-    localdir='./irods/DATA'
+    localdir='./DATA/SIMPLE'
+    irodsColl = irods.createSubCollection(newcollection=newirodsdir) # If by-passing the putDir you must ensure the collection is created
     num = irods.putFile(localdir, newirodsdir, localfilename)
     utilities.log.info('Put {} files into irods coll {}'.format(num,newirodsdir))
 
     # GET back a files from q collection into a (potentially) diff filename 
     utilities.log.info('TEST a get')
-    irodsdir='/'.join([topdir,'test1','test2'])
+    irodsdir='/'.join([topdir,'TESTS','test1'])
     irodsfilename=['TEST1234_archive.tar.gz']
-    localdir='.'
+    localdir='./SCRATCH/TEST'
+    os.makedirs(localdir,mode = 0o777, exist_ok = True) # Again if by-passing the getDir do this specifically 
     num = irods.getFile(irodsdir, localdir, localfilename)
     utilities.log.info('Get {} files into localdir {}'.format(num,localdir))
 
     # Put an entire local tree to irods
     utilities.log.info('Test a tree copy to irods')
-    localdir='/projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/pipelines/TEST3'
+    localdir='./DATA/OBSMOD-TEST'
     # The following will create depth as needed sort of like mkdir -p
-    irodsdir='/'.join([topdir,'test1','DELETEME','MOREDEEP'])
+    irodsdir='/'.join([topdir,'TESTS','test2'])
     t1=tm.time()
     num = irods.putDir(localdir, irodsdir)
     utilities.log.info('Put {} files into irods coll at {}'.format(num,irodsdir))
@@ -95,8 +97,8 @@ def main(args):
     # Get an entire tree from irods to a local dir
     utilities.log.info('Test a tree get from irods to local FS')
     t1=tm.time()
-    outlocaldir='/projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/pipelines/TEST4'
-    inirodsdir='/'.join([topdir,'test1','DELETEME','MOREDEEP'])
+    outlocaldir='./SCRATCH/TEST2'
+    inirodsdir='/'.join([topdir,'TESTS','test2'])
     num = irods.getDir(inirodsdir, outlocaldir )
     utilities.log.info('Get {} files from irods coll to {}'.format(num,outlocaldir))
     utilities.log.info('Put dir time is {}'.format(tm.time()-t1))
