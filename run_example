@@ -1,5 +1,7 @@
 # Run the simple ./test/test_irods.py app
 
+0) Choose which irods user to work as. By default, we now act as "ieds"; the irods eds service account
+
 1) If you want to use the default configuration file (./config/irods_environment.json) and pass the passwd on the cmd line.
 
 python ./test/test_irodes.py --passwd 'password'

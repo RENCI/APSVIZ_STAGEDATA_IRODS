@@ -69,7 +69,6 @@ def main(args):
     newirodsdir='/'.join([topdir,'TESTS','test1'])
     # Push a single file to the new subcollection
     localfilename=['TEST1234_archive.tar.gz']
-    #localfilename=['maxwvel.63.10.10.mbtiles']
     localdir='./DATA/SIMPLE'
     irodsColl = irods.createSubCollection(newcollection=newirodsdir) # If by-passing the putDir you must ensure the collection is created
     num = irods.putFile(localdir, newirodsdir, localfilename)
@@ -103,24 +102,6 @@ def main(args):
     utilities.log.info('Get {} files from irods coll to {}'.format(num,outlocaldir))
     utilities.log.info('Put dir time is {}'.format(tm.time()-t1))
 
-# Time some larger runs
-# Put an entire reanalysis tree onto irods.
-
-#    localdir='/projects/sequence_analysis/vol1/prediction_work/ADCIRCSupportTools/ADCIRCSupportTools/reanalysis/REGION3-FEMA'
-#    irodsdir='/'.join([topdir,'REGION3-FEMA-REANALYSIS'])
-#    t1=tm.time()
-#    num = irods.putDir(localdir, irodsdir)
-#    print('Put dir time is {}'.format(tm.time()-t1))
-
-# Now time reading the data back to local disk
-
-#    t1=tm.time()
-#    outlocldir='/projects/sequence_analysis/vol1/prediction_work/FEMA-TEST'
-#    inirodsdir='/'.join([topdir,'REGION3-FEMA-REANALYSIS'])
-#    num = irods.getDir(inirodsdir, outlocaldir )
-#    print('Get dir time is {}'.format(tm.time()-t1))
-#    print(num)
-    
 if __name__ == '__main__':
     from argparse import ArgumentParser
     import sys
